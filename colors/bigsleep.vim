@@ -4,23 +4,22 @@
 
 let s:red     = '#b44b4e'
 let s:green   = '#8f9d6a'
-" let s:blue    = '#677890'
-let s:blue    = '#627289'
-let s:cyan    = '#75b5aa'
+let s:blue    = '#5c6a7d'
+let s:cyan    = '#6a98a2'
 let s:magenta = '#a27a98'
-let s:yellow  = '#c5a671'
+let s:yellow  = '#cda671'
 let s:orange  = '#cf6a4c'
 let s:brown   = '#8f5536'
 
-" bg / text / ui
+" TODO text / ui colors
 let s:gui00 = '#141213'
 let s:gui01 = '#201e1f'
 let s:gui02 = '#2b2a2b'
 let s:gui03 = '#3f3e40'
 let s:gui05 = '#9998a0'
-let s:gui06 = '#1c1a1b'
 	let s:gui04 = '#abaaac'
-	let s:gui07 = '#e0e0e0'
+let s:gui06 = '#1c1a1b'
+let s:gui07 = '#222021'
 let s:gui08 = '#7b7a7c'
 let s:gui09 = '#9b9a9c'
 let s:gui0A = '#a1a0a2'
@@ -33,21 +32,21 @@ let s:gui0F = '#5d5c5e'
 if has('terminal')
 	let g:terminal_ansi_colors = [
 				\ s:gui00,
-				\ s:gui08,
-				\ s:gui0B,
-				\ s:gui0C,
-				\ s:gui0D,
-				\ s:gui0E,
-				\ s:gui0C,
+				\ s:gui01,
+				\ s:red,
+				\ s:red,
+				\ s:green,
+				\ s:green,
+				\ s:yellow,
+				\ s:yellow,
+				\ s:blue,
+				\ s:blue,
+				\ s:magenta,
+				\ s:magenta,
+				\ s:cyan,
+				\ s:cyan,
 				\ s:gui05,
-				\ s:gui03,
-				\ s:gui08,
-				\ s:gui0B,
-				\ s:gui0C,
-				\ s:gui0D,
-				\ s:gui0E,
-				\ s:gui0C,
-				\ s:gui07,
+				\ s:gui05,
 				\ ]
 endif
 
@@ -109,8 +108,8 @@ call <sid>hi('CursorColumn' , ''      , s:gui01  , 'none' , '')
 call <sid>hi('CursorLine'   , ''      , s:gui01  , 'none' , '')
 call <sid>hi('CursorLineNr' , s:gui04 , s:gui01  , 'none' , '')
 call <sid>hi('QuickFixLine' , s:gui00 , s:gui05  , 'none' , '')
-call <sid>hi('qfLineNr'     , ''      , s:gui0D  , 'none' , '')
-call <sid>hi('Pmenu'        , s:gui05 , s:gui06  , 'none' , '')
+call <sid>hi('qfLineNr'     , s:gui0D , ''       , 'none' , '')
+call <sid>hi('Pmenu'        , s:gui05 , s:gui07  , 'none' , '')
 call <sid>hi('PmenuThumb'   , ''      , s:gui03  , ''     , '')
 call <sid>hi('PmenuSel'     , s:gui00 , s:gui05  , ''     , '')
 call <sid>hi('PmenuSbar'    , ''      , s:gui02  , ''     , '')
@@ -120,7 +119,7 @@ call <sid>hi('TabLineSel'   , s:gui0B , s:gui01  , 'none' , '')
 
 " Standard syntax highlighting
 call <sid>hi('Boolean'      , s:orange  , ''      , ''       , '')
-call <sid>hi('Character'    , s:gui08   , ''      , ''       , '')
+call <sid>hi('Character'    , s:brown   , ''      , ''       , '')
 call <sid>hi('Comment'      , s:gui03   , ''      , ''       , '')
 call <sid>hi('Conditional'  , s:magenta , ''      , ''       , '')
 call <sid>hi('Constant'     , s:orange  , ''      , ''       , '')
@@ -133,7 +132,7 @@ call <sid>hi('Include'      , s:gui0D   , ''      , ''       , '')
 call <sid>hi('Keyword'      , s:gui0E   , ''      , ''       , '')
 call <sid>hi('Label'        , s:gui0A   , ''      , ''       , '')
 call <sid>hi('Number'       , s:gui09   , ''      , ''       , '')
-call <sid>hi('Operator'     , s:gui05   , ''      , 'none'   , '')
+call <sid>hi('Operator'     , s:gui0E   , ''      , 'none'   , '')
 call <sid>hi('PreProc'      , s:gui0A   , ''      , ''       , '')
 call <sid>hi('Repeat'       , s:magenta , ''      , ''       , '')
 call <sid>hi('Special'      , s:gui0C   , ''      , ''       , '')
@@ -141,7 +140,8 @@ call <sid>hi('SpecialChar'  , s:gui0F   , ''      , ''       , '')
 call <sid>hi('Statement'    , s:gui08   , ''      , ''       , '')
 call <sid>hi('StorageClass' , s:gui0D   , ''      , 'italic' , '')
 call <sid>hi('String'       , s:gui0B   , ''      , ''       , '')
-call <sid>hi('Structure'    , s:gui0D   , ''      , 'bold'   , '')
+" call <sid>hi('Structure'    , s:gui0D   , ''      , 'bold'   , '')
+call <sid>hi('Structure'    , s:gui0D   , ''      , ''       , '')
 call <sid>hi('Tag'          , s:gui0A   , ''      , ''       , '')
 call <sid>hi('Todo'         , s:yellow  , s:gui06 , ''       , '')
 call <sid>hi('Type'         , s:gui0D   , ''      , 'none'   , '')
@@ -153,9 +153,7 @@ call <sid>hi('cSpecial'   , s:brown   , '' , ''     , '')
 call <sid>hi('cCharacter' , s:brown   , '' , ''     , '')
 call <sid>hi('cStatement' , s:red     , '' , ''     , '')
 call <sid>hi('cFormat'    , s:yellow  , '' , ''     , '')
-call <sid>hi('cMulti'     , s:magenta , '' , ''     , '')
-call <sid>hi('cInclude'   , s:gui0D   , '' , ''     , '')
-call <sid>hi('cIncluded'  , s:gui0A   , '' , ''     , '')
+call <sid>hi('cIncluded'  , s:gui0E   , '' , ''     , '')
 
 " Python highlighting
 call <sid>hi('pythonOperator'        , s:gui0E   , '' , '' , '')
@@ -288,8 +286,8 @@ call <sid>hi('SignifySignDelete' , s:red   , '' , '' , '')
 " Spelling highlighting
 call <sid>hi('SpellBad'   , '' , '' , 'undercurl' , s:red)
 call <sid>hi('SpellLocal' , '' , '' , 'undercurl' , s:gui0C)
-call <sid>hi('SpellCap'   , '' , '' , 'undercurl' , s:blue)
-call <sid>hi('SpellRare'  , '' , '' , 'undercurl' , s:magenta)
+call <sid>hi('SpellCap'   , '' , '' , 'undercurl' , s:magenta)
+call <sid>hi('SpellRare'  , '' , '' , 'undercurl' , s:gui0F)
 
 " Java highlighting
 call <sid>hi('javaOperator' , s:gui0D , '' , '' , '')
@@ -297,4 +295,4 @@ call <sid>hi('javaOperator' , s:gui0D , '' , '' , '')
 delf <sid>hi
 
 unlet s:red s:orange s:yellow s:green s:cyan s:blue s:magenta s:brown
-unlet s:gui00 s:gui01 s:gui02 s:gui03  s:gui04  s:gui05  s:gui06  s:gui07  s:gui08  s:gui09 s:gui0A  s:gui0B  s:gui0C  s:gui0D  s:gui0E  s:gui0F
+unlet s:gui00 s:gui01 s:gui02 s:gui03 s:gui04 s:gui05 s:gui06 s:gui07 s:gui08 s:gui09 s:gui0A s:gui0B s:gui0C s:gui0D s:gui0E s:gui0F
