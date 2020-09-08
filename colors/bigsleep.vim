@@ -140,7 +140,6 @@ call <sid>hi('SpecialChar'  , s:gui0F   , ''      , ''       , '')
 call <sid>hi('Statement'    , s:gui08   , ''      , ''       , '')
 call <sid>hi('StorageClass' , s:gui0D   , ''      , 'italic' , '')
 call <sid>hi('String'       , s:gui0B   , ''      , ''       , '')
-" call <sid>hi('Structure'    , s:gui0D   , ''      , 'bold'   , '')
 call <sid>hi('Structure'    , s:gui0D   , ''      , ''       , '')
 call <sid>hi('Tag'          , s:gui0A   , ''      , ''       , '')
 call <sid>hi('Todo'         , s:yellow  , s:gui06 , ''       , '')
@@ -154,6 +153,15 @@ call <sid>hi('cCharacter' , s:brown   , '' , ''     , '')
 call <sid>hi('cStatement' , s:red     , '' , ''     , '')
 call <sid>hi('cFormat'    , s:yellow  , '' , ''     , '')
 call <sid>hi('cIncluded'  , s:gui0E   , '' , ''     , '')
+
+" shell highlighting
+call <sid>hi('shOption'     , s:gui0E , '' , '' , '')
+call <sid>hi('shCommandSub' , s:gui05 , '' , '' , '')
+call <sid>hi('shCtrlSeq'    , s:brown , '' , '' , '')
+call <sid>hi('shQuote'      , s:green , '' , '' , '')
+call <sid>hi('shSpecial'    , s:brown , '' , '' , '')
+call <sid>hi('shSpecialDQ'  , s:brown , '' , '' , '')
+call <sid>hi('shStatement'  , s:blue  , '' , '' , '')
 
 " Python highlighting
 call <sid>hi('pythonOperator'        , s:gui0E   , '' , '' , '')
