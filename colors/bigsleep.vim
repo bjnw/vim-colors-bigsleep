@@ -3,7 +3,7 @@
 "" base16-vim inspired
 
 let s:red     = '#b44b4e'
-let s:green   = '#8f9d6a'
+let s:green   = '#86916b'
 let s:blue    = '#5c6a7d'
 let s:cyan    = '#6a98a2'
 let s:magenta = '#a27a98'
