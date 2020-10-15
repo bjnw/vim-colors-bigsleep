@@ -6,20 +6,22 @@ let s:red     = '#b44b4e'
 let s:green   = '#86916b'
 let s:blue    = '#5c6a7d'
 let s:cyan    = '#6a98a2'
-let s:magenta = '#a27a98'
+" let s:magenta = '#a27a98'
+let s:magenta = '#936c89'
 let s:yellow  = '#cda671'
 let s:orange  = '#cf6a4c'
 let s:brown   = '#8f5536'
 
 " TODO text / ui colors
-let s:gui00 = '#141213'
+" let s:gui00 = '#141213'
+let s:gui00 = '#131214'
 let s:gui01 = '#201e1f'
 let s:gui02 = '#2b2a2b'
 let s:gui03 = '#3f3e40'
 let s:gui05 = '#9998a0'
 	let s:gui04 = '#abaaac'
-let s:gui06 = '#1c1a1b'
-let s:gui07 = '#222021'
+let s:gui06 = '#1b1a1c'
+let s:gui07 = '#212022'
 let s:gui08 = '#7b7a7c'
 let s:gui09 = '#9b9a9c'
 let s:gui0A = '#a1a0a2'
@@ -95,7 +97,7 @@ call <sid>hi('VisualNOS'    , s:gui08 , ''       , ''     , '')
 call <sid>hi('WarningMsg'   , s:gui08 , ''       , ''     , '')
 call <sid>hi('WildMenu'     , s:gui00 , s:gui05  , ''     , '')
 call <sid>hi('Title'        , s:gui0D , ''       , 'none' , '')
-call <sid>hi('Conceal'      , s:gui0D , s:gui00  , ''     , '')
+call <sid>hi('Conceal'      , s:gui0E , s:gui00  , ''     , '')
 call <sid>hi('Cursor'       , s:gui00 , s:gui05  , ''     , '')
 call <sid>hi('NonText'      , s:gui02 , ''       , ''     , '')
 call <sid>hi('LineNr'       , s:gui01 , ''       , ''     , '')
@@ -137,7 +139,7 @@ call <sid>hi('PreProc'      , s:gui0A   , ''      , ''       , '')
 call <sid>hi('Repeat'       , s:magenta , ''      , ''       , '')
 call <sid>hi('Special'      , s:gui0C   , ''      , ''       , '')
 call <sid>hi('SpecialChar'  , s:gui0F   , ''      , ''       , '')
-call <sid>hi('Statement'    , s:gui08   , ''      , ''       , '')
+call <sid>hi('Statement'    , s:red     , ''      , ''       , '')
 call <sid>hi('StorageClass' , s:gui0D   , ''      , 'italic' , '')
 call <sid>hi('String'       , s:gui0B   , ''      , ''       , '')
 call <sid>hi('Structure'    , s:gui0D   , ''      , ''       , '')
@@ -150,7 +152,6 @@ call <sid>hi('Typedef'      , s:gui0A   , ''      , ''       , '')
 call <sid>hi('cPreCondit' , s:gui0A   , '' , 'bold' , '')
 call <sid>hi('cSpecial'   , s:brown   , '' , ''     , '')
 call <sid>hi('cCharacter' , s:brown   , '' , ''     , '')
-call <sid>hi('cStatement' , s:red     , '' , ''     , '')
 call <sid>hi('cFormat'    , s:yellow  , '' , ''     , '')
 call <sid>hi('cIncluded'  , s:gui0E   , '' , ''     , '')
 
@@ -158,6 +159,7 @@ call <sid>hi('cIncluded'  , s:gui0E   , '' , ''     , '')
 call <sid>hi('shOption'     , s:gui0E , '' , '' , '')
 call <sid>hi('shCommandSub' , s:gui05 , '' , '' , '')
 call <sid>hi('shCtrlSeq'    , s:brown , '' , '' , '')
+call <sid>hi('shLoop'       , s:magenta , '' , '' , '')
 call <sid>hi('shQuote'      , s:green , '' , '' , '')
 call <sid>hi('shSpecial'    , s:brown , '' , '' , '')
 call <sid>hi('shSpecialDQ'  , s:brown , '' , '' , '')
