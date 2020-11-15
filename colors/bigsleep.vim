@@ -3,7 +3,8 @@
 "" base16-vim inspired
 
 let s:red     = '#b44b4e'
-let s:green   = '#86916b'
+" let s:green   = '#86916b'
+let s:green   = '#7f876a'
 let s:blue    = '#5c6a7d'
 let s:cyan    = '#6a98a2'
 " let s:magenta = '#a27a98'
@@ -150,7 +151,6 @@ call <sid>hi('Typedef'      , s:gui0A   , ''      , ''       , '')
 
 " C highlighting
 call <sid>hi('cPreCondit' , s:gui0A   , '' , 'bold' , '')
-call <sid>hi('cSpecial'   , s:brown   , '' , ''     , '')
 call <sid>hi('cFormat'    , s:yellow  , '' , ''     , '')
 call <sid>hi('cIncluded'  , s:gui0E   , '' , ''     , '')
 
