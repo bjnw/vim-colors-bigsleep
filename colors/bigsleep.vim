@@ -2,29 +2,28 @@
 "" ourgotted maximus
 "" base16-vim inspired
 
-let s:red     = '#b44b4e'
-" let s:green   = '#86916b'
+" let s:red     = '#b44b4e'
+let s:red     = '#a94649'
 let s:green   = '#7f876a'
 let s:blue    = '#5c6a7d'
 let s:cyan    = '#6a98a2'
-" let s:magenta = '#a27a98'
 let s:magenta = '#936c89'
 let s:yellow  = '#cda671'
 let s:orange  = '#cf6a4c'
 let s:brown   = '#8f5536'
 
 " TODO text / ui colors
-" let s:gui00 = '#141213'
 let s:gui00 = '#131214'
 let s:gui01 = '#201e1f'
 let s:gui02 = '#2b2a2b'
 let s:gui03 = '#3f3e40'
-let s:gui05 = '#9998a0'
 	let s:gui04 = '#abaaac'
+let s:gui05 = '#9998a0'
 let s:gui06 = '#1b1a1c'
 let s:gui07 = '#212022'
 let s:gui08 = '#7b7a7c'
-let s:gui09 = '#9b9a9c'
+	" TODO numbers
+	let s:gui09 = '#7b7a7c'
 let s:gui0A = '#a1a0a2'
 let s:gui0B = s:green
 let s:gui0C = '#858486'
