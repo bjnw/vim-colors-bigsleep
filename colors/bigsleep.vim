@@ -2,15 +2,14 @@
 "" ourgotted maximus
 "" base16-vim inspired
 
-" let s:red     = '#b44b4e'
 let s:red     = '#a94649'
 let s:green   = '#7f876a'
-" let s:blue    = '#5c6a7d'
-let s:blue    = '#5e6a7b'
-let s:cyan    = '#6a98a2'
-let s:magenta = '#936c89'
+" let s:blue    = '#61687b'
+let s:blue    = '#636879'
+let s:cyan    = '#6c8993'
+let s:magenta = '#906f88'
 let s:yellow  = '#cda671'
-let s:orange  = '#cf6a4c'
+let s:orange  = '#b66c50'
 let s:brown   = '#8f5536'
 
 " TODO text / ui colors
@@ -18,7 +17,7 @@ let s:gui00 = '#131214'
 let s:gui01 = '#201e1f'
 let s:gui02 = '#2b2a2b'
 let s:gui03 = '#3f3e40'
-	let s:gui04 = '#abaaac'
+let s:gui04 = '#4d4c4e'
 let s:gui05 = '#9998a0'
 let s:gui06 = '#1b1a1c'
 let s:gui07 = '#212022'
@@ -32,29 +31,33 @@ let s:gui0D = '#676668'
 let s:gui0E = '#737274'
 let s:gui0F = '#5d5c5e'
 
-if has('terminal')
-	let g:terminal_ansi_colors = [
-				\ s:gui00,
-				\ s:gui01,
-				\ s:red,
-				\ s:red,
-				\ s:green,
-				\ s:green,
-				\ s:yellow,
-				\ s:yellow,
-				\ s:blue,
-				\ s:blue,
-				\ s:magenta,
-				\ s:magenta,
-				\ s:cyan,
-				\ s:cyan,
-				\ s:gui05,
-				\ s:gui05,
-				\ ]
-endif
+" if has('terminal')
+" 	let g:terminal_ansi_colors = [
+" 				\ s:gui00,
+" 				\ s:gui01,
+" 				\ s:red,
+" 				\ s:red,
+" 				\ s:green,
+" 				\ s:green,
+" 				\ s:yellow,
+" 				\ s:yellow,
+" 				\ s:blue,
+" 				\ s:blue,
+" 				\ s:magenta,
+" 				\ s:magenta,
+" 				\ s:cyan,
+" 				\ s:cyan,
+" 				\ s:gui05,
+" 				\ s:gui05,
+" 				\ ]
+" endif
 
 highlight clear
 syntax reset
+
+if !exists('g:bigsleep_apnea')
+	let g:bigsleep_apnea = 0
+endif
 let g:colors_name = 'bigsleep'
 
 function! s:hi(group, guifg, guibg, attr, guisp)
@@ -148,6 +151,18 @@ call <sid>hi('Tag'          , s:gui0A   , ''      , ''       , '')
 call <sid>hi('Todo'         , s:yellow  , s:gui06 , ''       , '')
 call <sid>hi('Type'         , s:gui0D   , ''      , 'none'   , '')
 call <sid>hi('Typedef'      , s:gui0A   , ''      , ''       , '')
+
+if g:bigsleep_apnea
+	" call <sid>hi('Normal'      , '#8f8e95' , '' , ''     , '')
+	call <sid>hi('Normal'      , '#939299' , '' , ''     , '')
+	" call <sid>hi('Delimiter'   , s:gui04   , '' , ''     , '')
+	call <sid>hi('Conditional' , s:gui0D   , '' , ''     , '')
+	call <sid>hi('Repeat'      , s:gui0D   , '' , ''     , '')
+	call <sid>hi('Boolean'     , s:gui08   , '' , ''     , '')
+	call <sid>hi('Constant'    , s:gui08   , '' , ''     , '')
+	call <sid>hi('Define'      , s:gui0D   , '' , 'none' , '')
+	" call <sid>hi('NonText'     , s:gui01   , '' , ''     , '')
+endif
 
 " C highlighting
 call <sid>hi('cPreCondit' , s:gui0A   , '' , 'bold' , '')
